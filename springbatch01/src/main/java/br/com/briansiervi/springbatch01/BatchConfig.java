@@ -23,17 +23,35 @@ public class BatchConfig {
   private StepBuilderFactory stepBuilderFactory;
 
   @Bean
-  public Job imprimeOlaJob() {
-    return jobBuilderFactory.get("imprimeOlaJob").start(imprimeOlaStep()).build();
+  Job imprimeOlaJob() {
+    return jobBuilderFactory
+        .get("imprimeOlaJob")
+        .start(imprimeOlaStep())
+        .build();
   }
 
   private Step imprimeOlaStep() {
-    return stepBuilderFactory.get("imprimeOlaStep").tasklet(new Tasklet() {
-      @Override
-      public RepeatStatus execute(StepContribution contribution, ChunkContext chunkContext) throws Exception {
-        System.out.println("Olá, mundo!");
-        return RepeatStatus.FINISHED;
-      }
-    }).build();
+    return stepBuilderFactory
+        .get("imprimeOlaStep")
+        .tasklet(tasklet())
+        .build();
+  }
+
+  private Tasklet tasklet() {
+    // Tasklet tasklet = new Tasklet() {
+    // @Override
+    // public RepeatStatus execute(StepContribution contribution, ChunkContext
+    // chunkContext) throws Exception {
+    // System.out.println("Olá, mundo!");
+    // return RepeatStatus.FINISHED;
+    // }
+    // };
+
+    Tasklet tasklet = (StepContribution contribution, ChunkContext chunkContext) -> {
+      System.out.println("Olá, mundo!");
+      return RepeatStatus.FINISHED;
+    };
+
+    return tasklet;
   }
 }

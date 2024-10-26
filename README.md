@@ -30,3 +30,10 @@ git clone https://repo
 ```
 docker compose up -d
 ```
+
+##### Create database
+
+```
+CREATE DATABASE spring_batch
+    DEFAULT CHARACTER SET = 'utf8mb4';
+```
