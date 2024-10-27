@@ -9,7 +9,9 @@
             "name": "Launch Java Program",
             "request": "launch",
             "mainClass": "${workspaceFolder}/src/main/java/br/com/briansiervi/springbatch01/Springbatch01Application.java",
-            "args": "nome=Brian"
+            "args": [
+                "nome=Brian"
+            ]
         }
     ]
 }
