@@ -31,4 +31,9 @@ build/
 
 .mvn
 
+### Bancos de dados ###
 application.properties
+
+### Logs ###
+log4j.xml
+logs
