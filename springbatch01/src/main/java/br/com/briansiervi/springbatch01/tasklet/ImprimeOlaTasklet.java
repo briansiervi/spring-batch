@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class ImprimeOlaTasklet implements Tasklet {
+  @SuppressWarnings("null")
   @Override
   public RepeatStatus execute(StepContribution contribution, ChunkContext chunkContext) throws Exception {
     System.out.println("Olá, mundo!");
