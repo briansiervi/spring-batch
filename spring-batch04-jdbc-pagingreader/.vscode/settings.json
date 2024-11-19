@@ -1,0 +1,5 @@
+{
+    "conventionalCommits.scopes": [
+        "spring_batch04_jdbc_pagingreader"
+    ]
+}
