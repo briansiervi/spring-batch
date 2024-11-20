@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class SpringBatch04JdbcPagingreaderApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(SpringBatch04JdbcPagingreaderApplication.class, args);
-	}
+  public static void main(String[] args) {
+    SpringApplication.run(SpringBatch04JdbcPagingreaderApplication.class, args);
+  }
 
 }
