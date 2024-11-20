@@ -1,0 +1,14 @@
+2024-11-20 12:28:49,573 INFO b.c.b.s.SpringBatch05SkipexceptionApplication [main] Starting SpringBatch05SkipexceptionApplication on desktop with PID 47233 (/home/brian/Documentos/workspace/spring-batch/spring_batch_05_skipexception/target/classes started by brian in /home/brian/Documentos/workspace/spring-batch/spring_batch_05_skipexception)
+2024-11-20 12:28:49,579 INFO b.c.b.s.SpringBatch05SkipexceptionApplication [main] No active profile set, falling back to default profiles: default
+2024-11-20 12:28:50,518 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2024-11-20 12:28:51,191 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2024-11-20 12:28:51,390 INFO b.c.b.s.SpringBatch05SkipexceptionApplication [main] Started SpringBatch05SkipexceptionApplication in 2.912 seconds (JVM running for 4.049)
+2024-11-20 12:28:51,402 INFO c.z.h.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown initiated...
+2024-11-20 12:28:51,414 INFO c.z.h.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown completed.
+2024-11-20 12:29:24,131 INFO b.c.b.s.SpringBatch05SkipexceptionApplication [main] Starting SpringBatch05SkipexceptionApplication on desktop with PID 47690 (/home/brian/Documentos/workspace/spring-batch/spring_batch_05_skipexception/target/classes started by brian in /home/brian/Documentos/workspace/spring-batch/spring_batch_05_skipexception)
+2024-11-20 12:29:24,137 INFO b.c.b.s.SpringBatch05SkipexceptionApplication [main] No active profile set, falling back to default profiles: default
+2024-11-20 12:29:25,019 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2024-11-20 12:29:25,564 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2024-11-20 12:29:25,735 INFO b.c.b.s.SpringBatch05SkipexceptionApplication [main] Started SpringBatch05SkipexceptionApplication in 2.684 seconds (JVM running for 3.681)
+2024-11-20 12:29:25,744 INFO c.z.h.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown initiated...
+2024-11-20 12:29:25,763 INFO c.z.h.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown completed.
