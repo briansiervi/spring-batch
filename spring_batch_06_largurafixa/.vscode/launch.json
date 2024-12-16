@@ -10,7 +10,8 @@
             "request": "launch",
             "mainClass": "${workspaceFolder}/src/main/java/br/com/briansiervi/spring_batch_06_largurafixa/SpringBatch06LargurafixaApplication.java",
             "args": [
-                "nome=Brian"
+                "nome=Brian",
+                "arquivoClientes=file:files/clientes.txt"
             ]
         }
     ]

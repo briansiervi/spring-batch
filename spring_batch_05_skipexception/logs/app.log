@@ -478,3 +478,20 @@ Caused by: java.sql.SQLException: Encerrando a execução - Cliente inválido ze
 2024-12-04 08:54:48,969 INFO c.z.h.HikariDataSource [SpringContextShutdownHook] HikariPool-2 - Shutdown completed.
 2024-12-04 08:54:48,971 INFO c.z.h.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown initiated...
 2024-12-04 08:54:48,981 INFO c.z.h.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown completed.
+2024-12-16 08:26:50,898 INFO b.c.b.s.SpringBatch05SkipexceptionApplication [main] Starting SpringBatch05SkipexceptionApplication on ubuntu2204 with PID 56799 (/home/brian/Documentos/workspace/spring-batch/spring_batch_05_skipexception/target/classes started by brian in /home/brian/Documentos/workspace/spring-batch/spring_batch_05_skipexception)
+2024-12-16 08:26:50,907 INFO b.c.b.s.SpringBatch05SkipexceptionApplication [main] No active profile set, falling back to default profiles: default
+2024-12-16 08:26:51,893 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2024-12-16 08:26:52,555 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2024-12-16 08:27:01,603 INFO o.s.b.c.r.s.JobRepositoryFactoryBean [main] No database type set, using meta data indicating: MYSQL
+2024-12-16 08:27:01,858 INFO o.s.b.c.l.s.SimpleJobLauncher [main] No TaskExecutor has been set, defaulting to synchronous executor.
+2024-12-16 08:27:01,979 INFO b.c.b.s.SpringBatch05SkipexceptionApplication [main] Started SpringBatch05SkipexceptionApplication in 12.235 seconds (JVM running for 13.752)
+2024-12-16 08:27:02,130 INFO o.s.b.c.l.s.SimpleJobLauncher [main] Job: [SimpleJob: [name=skipExceptionJob]] launched with the following parameters: [{run.id=11, nome=Brian}]
+2024-12-16 08:27:02,211 INFO o.s.b.c.j.SimpleStepHandler [main] Executing step: [skipExceptionStep]
+2024-12-16 08:27:02,222 INFO c.z.h.HikariDataSource [main] HikariPool-2 - Starting...
+2024-12-16 08:27:02,254 INFO c.z.h.HikariDataSource [main] HikariPool-2 - Start completed.
+2024-12-16 08:27:02,440 INFO o.s.b.c.s.AbstractStep [main] Step: [skipExceptionStep] executed in 227ms
+2024-12-16 08:27:02,476 INFO o.s.b.c.l.s.SimpleJobLauncher [main] Job: [SimpleJob: [name=skipExceptionJob]] completed with the following parameters: [{run.id=11, nome=Brian}] and the following status: [COMPLETED] in 288ms
+2024-12-16 08:27:02,496 INFO c.z.h.HikariDataSource [SpringContextShutdownHook] HikariPool-2 - Shutdown initiated...
+2024-12-16 08:27:02,527 INFO c.z.h.HikariDataSource [SpringContextShutdownHook] HikariPool-2 - Shutdown completed.
+2024-12-16 08:27:02,533 INFO c.z.h.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown initiated...
+2024-12-16 08:27:02,563 INFO c.z.h.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown completed.
