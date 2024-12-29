@@ -1,10 +1,22 @@
 package br.com.briansiervi.spring_batch_07_arquivo_multiplos_formatos.dominio;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Cliente {
 	private String nome;
 	private String sobrenome;
 	private String idade;
 	private String email;
+	private List<Transacao> transacoes = new ArrayList<>();
+
+	public List<Transacao> getTransacoes() {
+		return transacoes;
+	}
+
+	public void setTransacoes(List<Transacao> transacoes) {
+		this.transacoes = transacoes;
+	}
 
 	public String getNome() {
 		return nome;
@@ -41,6 +53,8 @@ public class Cliente {
 	@Override
 	public String toString() {
 		return "Cliente{" + "nome='" + nome + "'" + ", sobrenome ='" + sobrenome + "'" + ", idade='" + idade + "'"
-				+ ", email='" + email + "'" + '}';
+				+ ", email='" + email + "'" +
+				(transacoes.isEmpty() ? "" : ",transacoes=" + transacoes)
+				+ '}';
 	}
 }
