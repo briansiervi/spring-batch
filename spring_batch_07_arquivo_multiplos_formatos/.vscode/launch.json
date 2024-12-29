@@ -11,7 +11,7 @@
             "mainClass": "${workspaceFolder}/src/main/java/br/com/briansiervi/spring_batch_07_arquivo_multiplos_formatos/SpringBatch07ArquivoMultiplosFormatosApplication.java",
             "args": [
                 "nome=Brian",
-                "arquivoClientes=file:files/clientes.txt"
+                "arquivosClientes=file:files/clientes*.txt"
             ]
         }
     ]
