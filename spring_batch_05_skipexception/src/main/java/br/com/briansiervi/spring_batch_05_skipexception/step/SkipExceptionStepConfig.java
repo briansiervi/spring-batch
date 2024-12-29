@@ -24,7 +24,7 @@ public class SkipExceptionStepConfig {
         .writer(skipExceptionWriter)
         .faultTolerant()
         .skip(Exception.class)
-        .skipLimit(2)
+        .skipLimit(5)
         .build();
   }
 }

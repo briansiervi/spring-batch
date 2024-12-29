@@ -1,2 +1,5 @@
+*.log
 .mvn
-spring_batch_05_skipexception/logs/app.log
+spring_batch_08_desafio_leitores/.gitattributes
+spring_batch_08_desafio_leitores/mvnw
+spring_batch_08_desafio_leitores/mvnw.cmd
