@@ -1,2 +1,0 @@
--- SQLBook: Code
-CREATE DATABASE spring_batch DEFAULT CHARACTER SET = 'utf8mb4';
