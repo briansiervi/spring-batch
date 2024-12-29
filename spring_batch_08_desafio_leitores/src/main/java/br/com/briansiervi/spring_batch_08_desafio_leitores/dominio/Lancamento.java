@@ -2,6 +2,8 @@ package br.com.briansiervi.spring_batch_08_desafio_leitores.dominio;
 
 import java.util.List;
 
+import br.com.briansiervi.spring_batch_08_desafio_leitores.util.Util;
+
 public class Lancamento {
   private int id;
   private String nome;
@@ -33,21 +35,10 @@ public class Lancamento {
 
   @Override
   public String toString() {
-    return id <= 0 ? ""
-        : "\n---- Demonstrativo orçamentário ----"
-            + "\n[" + id + "] " + nome + " - "
-            + (itens.isEmpty() ? "R$ 0,00"
-                : "R$ " + itens.stream().mapToDouble(item -> item.getValor()).sum());
-
-    // return "\n---- Demonstrativo orçamentário ----"
-    // + "\n[" + id + "] " + nome + " - "
-    // + (itens.isEmpty() ? "R$ 0,00"
-    // : "R$ " + itens.stream().mapToDouble(item -> item.getValor()).sum() + "" +
-    // itens
-    // .stream().map(item -> {
-    // return "\n\t[" + item.getData() + "] " + item.getNome() + " - R$ " +
-    // item.getValor();
-    // }));
+    return "\n---- Demonstrativo orçamentário ----"
+        + "\n[" + id + "] " + nome + " - "
+        + (itens.isEmpty() ? "R$ 0,00"
+            : (Util.imprimeReal(itens.stream().mapToDouble(item -> item.getValor()).sum())
+                + Item.imprimeArray(itens)));
   }
-
 }

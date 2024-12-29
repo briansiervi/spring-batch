@@ -45,9 +45,10 @@ public class LineMapperConfig {
     return fieldSetMapper;
   }
 
+  @SuppressWarnings("static-access")
   private LineTokenizer arquivoTokenizer() {
     DelimitedLineTokenizer lineTokenizer = new DelimitedLineTokenizer();
-    lineTokenizer.setDelimiter(",");
+    lineTokenizer.setDelimiter(lineTokenizer.DELIMITER_COMMA);
     lineTokenizer.setNames("id", "nomeLancamento", "nomeItem", "data", "valor");
     return lineTokenizer;
   }

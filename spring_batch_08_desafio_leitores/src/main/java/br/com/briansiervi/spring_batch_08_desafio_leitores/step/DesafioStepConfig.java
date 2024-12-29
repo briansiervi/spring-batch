@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
 import br.com.briansiervi.spring_batch_08_desafio_leitores.dominio.Lancamento;
 
 @Configuration
-public class LeituraArquivoStepConfig {
+public class DesafioStepConfig {
 
   @Autowired
   public StepBuilderFactory stepBuilderFactory;

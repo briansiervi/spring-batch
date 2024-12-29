@@ -42,13 +42,15 @@ public class ArquivoLancamentoItemReader implements ResourceAwareItemReaderItemS
   @Override
   @Nullable
   public Lancamento read() throws Exception {
+    Lancamento lancamento = null;
+
     if (objAtual == null)
       objAtual = (Arquivo) delegate.read();
 
     Arquivo arquivo = (Arquivo) objAtual;
-    Lancamento lancamento = new Lancamento();
 
     if (arquivo != null) {
+      lancamento = new Lancamento();
       lancamento.setId(objAtual.getId());
       lancamento.setNome(objAtual.getNomeLancamento());
 
