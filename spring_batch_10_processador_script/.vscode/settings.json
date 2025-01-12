@@ -1,0 +1,5 @@
+{
+    "conventionalCommits.scopes": [
+        "spring_batch_10_processador_script"
+    ]
+}

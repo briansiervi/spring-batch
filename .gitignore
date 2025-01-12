@@ -1,5 +1,5 @@
 *.log
 .mvn
-spring_batch_08_desafio_leitores/.gitattributes
-spring_batch_08_desafio_leitores/mvnw
-spring_batch_08_desafio_leitores/mvnw.cmd
+.gitattributes
+target
+mvnw*
