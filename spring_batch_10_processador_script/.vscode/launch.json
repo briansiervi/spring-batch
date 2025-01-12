@@ -12,6 +12,9 @@
             "args": [
                 "nome=Brian",
                 "arquivoClientes=file:files/clientes.txt"
+            ],
+            "vmArgs": [
+                "-Dnashorn.args=-scripting"
             ]
         }
     ]
