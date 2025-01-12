@@ -1,0 +1,5 @@
+{
+    "conventionalCommits.scopes": [
+        "spring_batch_11_processador_classificador"
+    ]
+}
