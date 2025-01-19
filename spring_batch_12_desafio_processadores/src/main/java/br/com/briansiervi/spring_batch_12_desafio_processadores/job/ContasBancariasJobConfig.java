@@ -11,15 +11,15 @@ import org.springframework.context.annotation.Configuration;
 
 @EnableBatchProcessing
 @Configuration
-public class desafioProcessorJobConfig {
+public class ContasBancariasJobConfig {
   @Autowired
   private JobBuilderFactory jobBuilderFactory;
 
   @Bean
-  public Job desafioProcessorJob(Step desafioStep) {
+  public Job contasBancariasJob(Step contasBancariasStep) {
     return jobBuilderFactory
-        .get("desafioProcessorJob")
-        .start(desafioStep)
+        .get("contasBancariasJob")
+        .start(contasBancariasStep)
         .incrementer(new RunIdIncrementer())
         .build();
   }

@@ -2,8 +2,10 @@ package br.com.briansiervi.spring_batch_12_desafio_processadores.reader;
 
 import javax.sql.DataSource;
 
+import org.springframework.batch.item.database.JdbcCursorItemReader;
 import org.springframework.batch.item.database.JdbcPagingItemReader;
 import org.springframework.batch.item.database.PagingQueryProvider;
+import org.springframework.batch.item.database.builder.JdbcCursorItemReaderBuilder;
 import org.springframework.batch.item.database.builder.JdbcPagingItemReaderBuilder;
 import org.springframework.batch.item.database.support.SqlPagingQueryProviderFactoryBean;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -14,7 +16,7 @@ import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import br.com.briansiervi.spring_batch_12_desafio_processadores.dominio.Cliente;
 
 @Configuration
-public class desafioReader {
+public class ContasBancariasReader {
   @Bean
   public JdbcPagingItemReader<Cliente> jdbcPagingItemReader(@Qualifier("xptoDataSource") DataSource dataSource,
       PagingQueryProvider queryProvider) {
@@ -38,4 +40,16 @@ public class desafioReader {
 
     return queryProvider;
   }
+
+  // @SuppressWarnings({ "unchecked", "rawtypes" })
+  // @Bean
+  // public JdbcCursorItemReader<Cliente>
+  // jdbcCursorItemReader(@Qualifier("xptoDataSource") DataSource dataSource) {
+  // return new JdbcCursorItemReaderBuilder()
+  // .name("jdbcCursorItemReader")
+  // .dataSource(dataSource)
+  // .sql("select * from cliente")
+  // .rowMapper(new BeanPropertyRowMapper<Cliente>(Cliente.class))
+  // .build();
+  // }
 }
