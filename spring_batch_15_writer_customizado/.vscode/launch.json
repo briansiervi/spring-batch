@@ -12,7 +12,7 @@
             "args": [
                 "nome=Brian",
                 "arquivoClientes=file:files/clientes.txt",
-                "arquivoClientesSaida=file:files/clientesSaida.txt"
+                "demonstrativoOrcamentario=file:files/demonstrativoOrcamentario.txt"
             ]
         }
     ]
