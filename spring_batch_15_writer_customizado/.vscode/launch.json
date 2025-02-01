@@ -10,9 +10,7 @@
             "request": "launch",
             "mainClass": "${workspaceFolder}/src/main/java/com/springbatch/demonstrativoorcamentario/DemonstrativoOrcamentarioJobApplication.java",
             "args": [
-                "nome=Brian",
-                "arquivoClientes=file:files/clientes.txt",
-                "demonstrativoOrcamentario=file:files/demonstrativoOrcamentario.txt"
+                "demonstrativosOrcamentarios=file:files/demonstrativosOrcamentarios"
             ]
         }
     ]
