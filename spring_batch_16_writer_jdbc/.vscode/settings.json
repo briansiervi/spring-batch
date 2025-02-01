@@ -1,0 +1,5 @@
+{
+    "conventionalCommits.scopes": [
+        "spring_batch_16_writer_jdbc"
+    ]
+}
