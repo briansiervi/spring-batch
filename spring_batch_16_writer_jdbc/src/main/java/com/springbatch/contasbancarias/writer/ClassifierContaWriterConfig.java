@@ -1,4 +1,4 @@
-package com.springbatch.contasbancarias.processor;
+package com.springbatch.contasbancarias.writer;
 
 import org.springframework.batch.item.ItemWriter;
 import org.springframework.batch.item.file.FlatFileItemWriter;
