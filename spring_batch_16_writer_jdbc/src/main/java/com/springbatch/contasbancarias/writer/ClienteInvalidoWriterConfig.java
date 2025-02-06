@@ -9,14 +9,14 @@ import org.springframework.core.io.FileSystemResource;
 import com.springbatch.contasbancarias.dominio.Conta;
 
 @Configuration
-public class FileContaWriterConfig {
+public class ClienteInvalidoWriterConfig {
   @Bean
-  public FlatFileItemWriter<Conta> fileContaWriter() {
+  public FlatFileItemWriter<Conta> clienteInvalidoWriter() {
     return new FlatFileItemWriterBuilder<Conta>()
-        .name("fileContaWriter")
-        .resource(new FileSystemResource("./files/contas.txt"))
+        .name("clienteInvalidoWriter")
+        .resource(new FileSystemResource("./files/clientesInvalidos.txt"))
         .delimited()
-        .names("tipo", "limite", "clienteId")
+        .names("clienteId")
         .build();
   }
 }
