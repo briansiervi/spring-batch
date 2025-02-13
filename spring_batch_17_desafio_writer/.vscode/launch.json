@@ -12,6 +12,7 @@
             "args": [
                 "nome=Brian"
             ]
+            // ,"vmArgs": "-Duser.timezone=\"Europe/London\""
         }
     ]
 }

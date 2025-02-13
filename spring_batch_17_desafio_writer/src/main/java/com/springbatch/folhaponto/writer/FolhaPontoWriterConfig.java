@@ -44,7 +44,7 @@ public class FolhaPontoWriterConfig {
 	private void imprimeCabecalho() {
 		System.out.print(String.format("SISTEMA INTEGRADO: XPTO \t\t\t\t DATA: %s\n",
 				new SimpleDateFormat("dd/MM/yyyy").format(new Date())));
-		System.out.print(String.format("MÓDULO: RH \t\t\t\t\t\t\t\t HORA: %s\n",
+		System.out.print(String.format("MÓDULO: RH \t\t\t\t\t\t HORA: %s\n",
 				new SimpleDateFormat("HH:MM").format(new Date())));
 		System.out.print(String.format("\t\t\t\tFOLHA DE PONTO\n"));
 	}
