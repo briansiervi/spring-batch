@@ -14,19 +14,18 @@ public class FuncionarioReader implements ItemStreamReader<Funcionario> {
 	public FuncionarioReader(JdbcCursorItemReader<Funcionario> delegate) {
 		this.delegate = delegate;
 	}
-	
+
 	@Override
 	public Funcionario read() throws Exception {
 		if (funcionarioAtual == null)
 			funcionarioAtual = delegate.read();
 
 		Funcionario funcionario = funcionarioAtual;
-		
+
 		if (funcionarioAtual != null) {
 			if (funcionarioAtual.getData() != null)
 				funcionario.getRegistrosPonto().add(funcionarioAtual.getData());
-			
-			
+
 			Funcionario proximoFuncionario = peek();
 			while (proximoFuncionario != null && proximoFuncionario.getMatricula() == funcionario.getMatricula()) {
 				funcionario.getRegistrosPonto().add(proximoFuncionario.getData());
@@ -42,12 +41,12 @@ public class FuncionarioReader implements ItemStreamReader<Funcionario> {
 	}
 
 	@Override
-	public void open(ExecutionContext executionContext) throws ItemStreamException {
+	public void open(@SuppressWarnings("null") ExecutionContext executionContext) throws ItemStreamException {
 		delegate.open(executionContext);
 	}
 
 	@Override
-	public void update(ExecutionContext executionContext) throws ItemStreamException {
+	public void update(@SuppressWarnings("null") ExecutionContext executionContext) throws ItemStreamException {
 		delegate.update(executionContext);
 	}
 

@@ -13,7 +13,7 @@ import com.springbatch.folhaponto.util.DataUtil;
 
 public class FolhaPontoItemProcessor implements ItemProcessor<Funcionario, FolhaPonto> {
 	@Override
-	public FolhaPonto process(Funcionario funcionario) throws Exception {
+	public FolhaPonto process(@SuppressWarnings("null") Funcionario funcionario) throws Exception {
 		FolhaPonto folhaPonto = new FolhaPonto();
 		folhaPonto.setMatricula(funcionario.getMatricula());
 		folhaPonto.setNome(funcionario.getNome());

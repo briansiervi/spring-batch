@@ -1,3 +1,5 @@
+use app;
+
 DROP TABLE IF EXISTS funcionario;
 
 CREATE table funcionario (
