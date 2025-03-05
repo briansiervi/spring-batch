@@ -5,6 +5,7 @@ import org.springframework.batch.core.configuration.annotation.StepBuilderFactor
 import org.springframework.batch.item.ItemReader;
 import org.springframework.batch.item.ItemWriter;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -17,7 +18,7 @@ public class MigrarDadosBancariosStepConfig {
 
   @Bean
   public Step migrarDadosBancariosStep(
-      ItemReader<DadoBancario> arquivoDadosBancariosReader,
+      @Qualifier("dadosBancariosReader") ItemReader<DadoBancario> arquivoDadosBancariosReader,
       ItemWriter<DadoBancario> bancoDadosBancariosWriter) {
     return stepBuilderFactory
         .get("migrarDadosBancariosStep")
