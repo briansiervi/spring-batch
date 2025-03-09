@@ -13,7 +13,7 @@ public class ArquivoDadosBancariosReaderConfig {
   public FlatFileItemReader<DadoBancario> dadosBancariosReader() {
     return new FlatFileItemReaderBuilder<DadoBancario>()
         .name("dadosBancariosReader")
-        .resource(new FileSystemResource("filse/dados_bancarios.csv"))
+        .resource(new FileSystemResource("files/dados_bancarios.csv"))
         .delimited()
         .names("pessoaId", "agencia", "conta", "banco", "id")
         .addComment("--")
