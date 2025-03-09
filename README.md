@@ -19,21 +19,23 @@ Built using [Spring Batch](https://spring.io/projects/spring-batch).
 #### Prerequisites
 
 - Docker
-- Git 2
+- Git
 
 #### Install project
 
 ```
-git clone https://repo
+git clone https://github.com/briansiervi/spring-batch.git
 ```
 
 ```
 docker compose up -d
 ```
 
-##### Create database
+#### Sql scripts
 
-```
-CREATE DATABASE spring_batch
-    DEFAULT CHARACTER SET = 'utf8mb4';
-```
+Run the following sql scripts:
+1. [spring_batch](querys/spring_batch.sql)
+1. [app](querys/app.sql)
+1. [xpto](querys/xpto.sql)
+1. [migracao_dados](querys/migracao_dados.sql)
+1. [cartao_credito](querys/cartao_credito.sql)
