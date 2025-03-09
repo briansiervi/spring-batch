@@ -22,7 +22,7 @@ public class MigrarDadosBancariosStepConfig {
       @Qualifier("bancoDadosBancariosWriter") JdbcBatchItemWriter<DadoBancario> bancoDadosBancariosWriter) {
     return stepBuilderFactory
         .get("migrarDadosBancariosStep")
-        .<DadoBancario, DadoBancario>chunk(1)
+        .<DadoBancario, DadoBancario>chunk(10000)
         .reader(arquivoDadosBancariosReader)
         .writer(bancoDadosBancariosWriter)
         .build();
