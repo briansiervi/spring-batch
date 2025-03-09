@@ -3,7 +3,8 @@ package com.springbatch.migracaodados.migracao_dados_job.step;
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.configuration.annotation.StepBuilderFactory;
 import org.springframework.batch.item.ItemReader;
-import org.springframework.batch.item.database.JdbcBatchItemWriter;
+import org.springframework.batch.item.file.FlatFileItemWriter;
+import org.springframework.batch.item.support.ClassifierCompositeItemWriter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
@@ -19,12 +20,14 @@ public class MigrarPessoaStepConfig {
   @Bean
   public Step migrarPessoaStep(
       @Qualifier("arquivoPessoaReader") ItemReader<Pessoa> arquivoPessoaReader,
-      @Qualifier("bancoPessoaWriter") JdbcBatchItemWriter<Pessoa> bancoPessoaWriter) {
+      ClassifierCompositeItemWriter<Pessoa> pessoaClassifierWriter,
+      FlatFileItemWriter<Pessoa> arquivoPessoaInvalidaWriter) {
     return stepBuilderFactory
         .get("migrarPessoaStep")
         .<Pessoa, Pessoa>chunk(1)
         .reader(arquivoPessoaReader)
-        .writer(bancoPessoaWriter)
+        .writer(pessoaClassifierWriter)
+        .stream(arquivoPessoaInvalidaWriter)
         .build();
   }
 }
