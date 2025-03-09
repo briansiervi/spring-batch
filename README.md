@@ -4,6 +4,7 @@
 
 <p align="center">
  <a href="#tech">Technologies</a> • 
+ <a href="#getting-started">🚀 Getting Started</a> • 
 </p>
 
 <p align="center">
@@ -14,7 +15,7 @@
 
 Built using [Spring Batch](https://spring.io/projects/spring-batch).
 
-### 🚀 Getting Started
+<h3 id="getting-started">🚀 Getting Started</h3>
 
 #### Prerequisites
 
