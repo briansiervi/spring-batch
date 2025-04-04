@@ -18,7 +18,7 @@ public class EnvioEmailClientesStepConfig {
   private StepBuilderFactory stepBuilderFactory;
 
   @Bean
-  private Step enviaEmailClientesStep(
+  public Step enviaEmailClientesStep(
       ItemReader<InteresseProdutoCliente> lerInteresseProdutoClienteReader,
       ItemProcessor<InteresseProdutoCliente, SimpleMailMessage> processarEmailProdutoClienteProcessor,
       ItemWriter<SimpleMailMessage> enviarEmailProdutoClienteWriter) {
