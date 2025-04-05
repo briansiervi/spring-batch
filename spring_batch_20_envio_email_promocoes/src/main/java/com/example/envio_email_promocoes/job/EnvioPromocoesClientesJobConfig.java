@@ -2,23 +2,23 @@ package com.example.envio_email_promocoes.job;
 
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
-import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
-import org.springframework.batch.core.configuration.annotation.JobBuilderFactory;
+import org.springframework.batch.core.job.builder.JobBuilder;
 import org.springframework.batch.core.launch.support.RunIdIncrementer;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.batch.core.repository.JobRepository;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-@EnableBatchProcessing
 @Configuration
 public class EnvioPromocoesClientesJobConfig {
-  @Autowired
-  private JobBuilderFactory jobBuilderFactory;
+  private final JobRepository jobRepository;
+
+  public EnvioPromocoesClientesJobConfig(JobRepository jobRepository) {
+    this.jobRepository = jobRepository;
+  }
 
   @Bean
-  public Job envioEmailCientesJob(Step envioEmailClientesStep) {
-    return jobBuilderFactory
-        .get("envioEmailCientesJob")
+  public Job envioEmailClientesJob(Step envioEmailClientesStep) {
+    return new JobBuilder("envioEmailClientesJob", jobRepository)
         .start(envioEmailClientesStep)
         .incrementer(new RunIdIncrementer())
         .build();
