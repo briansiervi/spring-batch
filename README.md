@@ -3,8 +3,9 @@
 ![java](https://img.shields.io/badge/Java-red)
 
 <p align="center">
- <a href="#tech">Technologies</a> • 
- <a href="#getting-started">🚀 Getting Started</a> • 
+• <a href="#tech">Technologies</a> •
+  <a href="#getting-started">🚀 Getting Started</a> •
+  <a href="#tricks">🪄 Tricks</a> •
 </p>
 
 <p align="center">
@@ -42,3 +43,16 @@ docker compose up -d
 #### Run one project on VsCode
 
 You can run anyone [this projects](https://github.com/briansiervi/spring-batch/tree/main) in vscode. I recommended for this that you use [this extensions](https://gist.github.com/briansiervi/37e1d13ae83ae6b111f56f1328b75dde).
+
+<h3 id="tricks">🪄 Tricks</h3>
+
+Command to ignore one file
+
+```bash
+git update-index --assume-unchanged src/main/resources/application.properties
+```
+
+Command to track the file again
+```bash
+git update-index --really-refresh
+```
