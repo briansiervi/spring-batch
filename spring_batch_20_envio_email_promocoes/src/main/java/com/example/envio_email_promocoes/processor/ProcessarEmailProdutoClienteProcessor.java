@@ -22,6 +22,7 @@ public class ProcessarEmailProdutoClienteProcessor
     email.setTo(interesseProdutoCliente.getCliente().getEmail());
     email.setSubject("Promoção imperdível!!!");
     email.setText(gerarTextoPromocao(interesseProdutoCliente));
+    Thread.sleep(2000);
 
     return email;
   };
