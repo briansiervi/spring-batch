@@ -3,3 +3,4 @@
 .gitattributes
 target
 mvnw*
+spring_batch_21_service_reader_job/.DS_Store
