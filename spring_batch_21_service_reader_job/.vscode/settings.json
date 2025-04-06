@@ -1,0 +1,5 @@
+{
+    "conventionalCommits.scopes": [
+        "spring_batch_21_service_reader_job"
+    ]
+}
