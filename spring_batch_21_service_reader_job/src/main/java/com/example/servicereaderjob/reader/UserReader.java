@@ -24,7 +24,6 @@ public class UserReader implements ItemReader<User> {
   private int page = 1;
   private List<User> users = new ArrayList<>();
   private int userIndex = 0;
-  private int total = 0;
 
   @Value("${chunkSize}")
   private int chunkSize;
@@ -50,6 +49,7 @@ public class UserReader implements ItemReader<User> {
 
   @SuppressWarnings("null")
   private List<User> fetchUserDataFromAPI() {
+    System.out.println("fetch");
     ResponseEntity<ResponseUser> response = restTemplate
         .getForEntity(String.format("https://gorest.co.in/public/v1/users?page=%d", page), ResponseUser.class);
     List<User> users = response.getBody().getData();
@@ -58,12 +58,9 @@ public class UserReader implements ItemReader<User> {
 
   @BeforeChunk
   private void beforeChunk(ChunkContext context) {
-    for (int i = 0; i < chunkSize; i += pageSize) {
-      if (total >= limit)
-        return;
-
+    System.out.println("Antes do chunk");
+    for (int i = 1; (i <= (chunkSize / pageSize)) && (page <= (limit / pageSize)); i++) {
       users.addAll(fetchUserDataFromAPI());
-      total += pageSize;
       page++;
     }
   }
